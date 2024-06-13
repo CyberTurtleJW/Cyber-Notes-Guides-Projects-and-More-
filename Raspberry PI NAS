@@ -1,0 +1,48 @@
+This is a step by step guide on how to build a NAS on a Raspberry PI
+
+Here is a solid video to use https://www.youtube.com/watch?v=gyMpI8csWis
+
+Things you need:
+Raspberry PI 4 with 4gb or 8gb of ram 
+SD Card 
+SD Card Reader 
+USB Harddrive 
+Power Supply
+
+
+Here is a cool kit you can buy that will let you attatch a SATA to your Raspberry PI - https://a.co/d/1UqFhBR
+
+
+1. Your will want to download the Raspberry Imager and use the Raspberry PI Lite Image for your PI (This will be on the SD Card) 
+
+2. Before you image hit control + X and you can enable SSH and set a password 
+
+3. Once you image the SD Card put it in your PI and then plug everything up (you will want to use ethernet and not WiFi)
+
+4. SSH to the PI using whatever method you can (EX: ssh pi@X.X.X.172)
+
+5. First thing youll want to do is run "sudo apt update && sudo apt upgrade" yes you will want to install everything!!!
+
+6. then youll want to install OpenMediaVault using this comman (wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash)
+
+7. Now you should be able to open a web interface using the same IP that you used to SSH 
+  7.1. default creds are username: admin password: openmediavault
+  7.2. Go to default settings and change default password
+
+8. Plug USB drive into PI
+  8.1. On the webpage go to storage.
+  8.2. go to file systems and mount your USB hard drive
+  8.3  Create a shared folder using access rights management then click ADD 
+  8.4  click apply so you do not lose your progress 
+
+9. Go to services then SMB and enable SMB (if you are using windows)
+  9.1. then add your shared folder into the SMB settings
+
+10. Accessing your NAS from Windows
+   10.1. You will want to go to your webpage and go to users click on your PI username and give it a password 
+   10.2. now you will want to open file explorer (Win + E) 
+   10.3. now go to this pc and under network locations right click and select "Add network location" 
+   10.4. now enter the path (EX \\192.168.172.1\PIZZA) then hit next and login!
+
+Congrats you now have a NAS on your home network that you can access!
+                                           
