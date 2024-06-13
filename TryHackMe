@@ -1,1 +1,29 @@
 SOC Level 1 Path
+
+Lockheed Martin Cyber Kill Chain has 7 steps in the total process those steps are as follows:
+
+Reconnaissance - is discovering and collecting information on the system and the victim or victims (This can be a company) this is just the planning phase. 
+
+Weaponization - 
+
+Delivery -
+
+Exploitation - 
+
+Installation - 
+
+Command and Control - 
+
+Actions and Objectives - 
+
+
+
+Some things to help with Phase 1 is OSINT (Open-Source Intelligence) falls under Recon. this is the first step an attacker needs to complete to carry out the further phase of the attack. you need to collect every bit of information 
+you can find online and readily available. 
+
+OSINT Framework - OSINT Framwork provides the collection of OSINT Tools based on various categories https://osintframework.com/
+
+Hunter.io - this is an email hunting tool that will let you obtain contact information associated with the domain. 
+
+TheHarvester - this tool can gather emails, names, subdomains, IP's, and URLS using public data https://github.com/laramies/theHarveste
+
